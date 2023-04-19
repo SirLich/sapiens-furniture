@@ -1,0 +1,62 @@
+{
+    "hammerstone:global_definitions": {
+		"hs_seat_types": [
+			{
+				"identifier": "chair",
+				"comfort": 1,
+				"nodes": [
+					{
+						"key": "seatNode_1",
+						"type": "yUpAnyDirection"
+					}
+				]
+			}
+		],
+		"hs_materials": [
+			{
+				"identifier": "bark",
+				"color": [
+					0.4313725, 0.2313725, 0.180392
+				],
+				"metal": 0,
+				"roughness": 1
+			}
+		],
+        "hs_model_remaps": [
+            {
+                "model": "pine_woodStock",
+                "base_model": "woodStock",
+                "material_remaps": [
+                    {
+                        "from": "whiteTrunk",
+                        "to": "trunk"
+                    }
+                ]
+            },
+            {
+                "model": "pine_woodStock",
+                "base_model": "woodStock",
+                "material_remaps": [
+                    {
+                        "from": "whiteTrunk",
+                        "to": "trunk"
+                    }
+                ]
+            },
+            {
+                "model": "bamboo_woodStock",
+                "base_model": "woodStock",
+                "material_remaps": [
+                    {
+                        "from": "whiteTrunk",
+                        "to": "bamboo"
+                    },
+                    {
+                        "from": "wood",
+                        "to": "bambooDark"
+                    }
+                ]
+            }
+		]
+	}
+}

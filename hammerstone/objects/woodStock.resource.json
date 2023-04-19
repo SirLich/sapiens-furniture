@@ -4,9 +4,6 @@
 			"identifier": "woodStock"
 		},
 		"components": {
-			"hs_object": {
-				"model": "woodStock"
-			},
 			"hs_resource": {
 				"storage_identifier": "woodStock_storage"
 			}
