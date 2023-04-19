@@ -1,0 +1,28 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Sapiens-OSS/hammerstone-framework/feature/data-driven-api/schemas/object.schema.json",
+	"hammerstone:object_definition": {
+		"description": {
+			"identifier": "table",
+			"name": "Table",
+			"plural": "Tables",
+			"summary": "A decorative eating spot"
+		},
+		"components": {
+			"hs_object": {
+				"model": "table"
+			},
+			"hs_buildable": {
+				"sequence": "researchBuildSequence",
+				"skills": [
+					"basicBuilding"
+				],
+				"resources": [
+					{
+						"resource": "woodCraftingSupplies",
+						"count": 2
+					}
+				]
+			}
+		}
+	}
+}

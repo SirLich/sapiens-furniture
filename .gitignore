@@ -1,3 +1,8 @@
+# Custom
+*.blend1
+*.blend2
+*.blend3
+
 # Compiled Lua sources
 luac.out
 
