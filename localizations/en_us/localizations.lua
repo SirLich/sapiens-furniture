@@ -3,15 +3,19 @@ local localizations = {}
 localizations.values = {
     -- WOOD STOCK
     woodStock_summary = "Refined wood parts. Used to build furniture.",
+    object_woodStock = "Wood Stock",
+    object_woodStock_plural = "Wood Stock",
 
-    woodStock_aspen = "Aspen Wood Stock",
-    woodStock_birch = "Birch Wood Stock",
-    woodStock_bamboo = "Bamboo Wood Stock",
-    woodStock_orange = "Orange Wood Stock",
-    woodStock_peach= "Peach Wood Stock",
-    woodStock_elderberry= "Elderberry Wood Stock",
-    woodStock_line= "Pine Wood Stock",
-    woodStock_willow= "Willow Wood Stock",
+    aspen_woodStock = "Aspen Wood Stock",
+    birch_woodStock = "Birch Wood Stock",
+    bamboo_woodStock = "Bamboo Wood Stock",
+    orange_woodStock = "Orange Wood Stock",
+    peach_woodStock = "Peach Wood Stock",
+    elderberry_woodStock= "Elderberry Wood Stock",
+    pine_woodStock = "Pine Wood Stock",
+    willow_woodStock = "Willow Wood Stock",
+    coconut_woodStock = "Coconut Wood Stock",
+    apple_woodStock = "Apple Wood Stock",
 
     -- STORAGE AREAS
     storage_woodStock_storage = "Wood Stock",
