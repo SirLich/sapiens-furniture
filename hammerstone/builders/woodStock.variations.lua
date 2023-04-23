@@ -8,8 +8,8 @@ local woodTypes = {
 	"aspen",
 	"birch",
 
-	"bamboo",
-	"coconut",
+	"bamboo", -- Only branches
+	"coconut", -- Only logs
 
 	"pine",
 
@@ -76,7 +76,7 @@ local materialsByWoodType = {
 
 local function generateModelRemap(baseModel, woodType)
 	local modelModule = moduleManager:get("model")
-	local newModel = baseModel .. "_" .. woodType
+	local newModel = woodType .. "_" .. baseModel
 
 	-- If the model exists, then don't create a remap
 	if modelModule:doesModelExist(newModel) then
@@ -107,6 +107,7 @@ local function generateObject(woodType)
 		}
 	}
 end
+
 
 function builder:getObjectConfigs()
 	local configs = {}
