@@ -31,7 +31,7 @@ return {
 			model = "chair"
 		},
 		hs_buildable = {
-			skill = "basicBuilding",
+			skill = "woodBuilding",
 			build_sequence = "clearObjectsAndTerrainSequence",
 			classification = "build",
 			seat_type = "chair",

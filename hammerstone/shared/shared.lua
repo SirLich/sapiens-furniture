@@ -23,7 +23,7 @@ return {
 	},
 	hs_materials = {
 		{
-			identifier = "bark",
+			identifier = "wood_bark",
 			color = {
 				0.4313725,
 				0.2313725,
@@ -31,6 +31,15 @@ return {
 			},
 			metal = 0,
 			roughness = 1
+		},
+		{
+			identifier = "wood_base",
+			color = {
+				0.4,0.32,0.25
+
+			},
+			metal = 0,
+			roughness = 0.8
 		}
 	}
 }
