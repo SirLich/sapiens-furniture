@@ -11,6 +11,8 @@ sat in by Sapiens, and include various styling depending on the wood used.
 
 # Contents
 
+![](assets/screenshot.png)
+
 ## Wood Stock
 
 To craft chairs, you first need to refine wood into 'Wood Stock' which is a stand-in for refined wood products. Wood Stock can be crafted at a normal crafting station, using the 'Woodworking' skill, and a scraping tool.
