@@ -39,7 +39,10 @@ local function generateCloth(color)
 	local identifier = color .. "_cloth"
 	return {
 		description = {
-			identifier = identifier
+			identifier = identifier,
+			name = identifier,
+			plural = identifier,
+			summary = "cloth_summary"
 		},
 		components = {
 			hs_object = {
@@ -54,7 +57,10 @@ local function generateDye(color)
 	local identifier = color .. "_dye"
 	return {
 		description = {
-			identifier = identifier
+			identifier = identifier,
+			name = identifier,
+			plural = identifier,
+			summary = "dye_summary"
 		},
 		components = {
 			hs_object = {

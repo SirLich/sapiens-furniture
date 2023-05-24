@@ -6,6 +6,14 @@ localizations.values = {
     object_woodStock = "Wood Stock",
     object_woodStock_plural = "Wood Stock",
     
+    -- DYE
+    dye_summary = "All natural dyes.",
+    object_dye = "Dye Bowl",
+    object_dye_plural = "Dye Bowl",
+
+    red_dye = "Red Dye",
+    blue_dye = "Blue Dye",
+
     aspen_woodStock = "Aspen Wood Stock",
     birch_woodStock = "Birch Wood Stock",
     bamboo_woodStock = "Bamboo Wood Stock",
@@ -17,6 +25,7 @@ localizations.values = {
     coconut_woodStock = "Coconut Wood Stock",
     apple_woodStock = "Apple Wood Stock",
 
+
     -- STORAGE AREAS
     storage_woodStock_storage = "Wood Stock",
 
@@ -27,7 +36,9 @@ localizations.values = {
 
     -- GROUPS
     group_woodStock_ingredients = "Raw Wood Product",
-    group_woodStock_ingredients_plural = "Raw Wood Products"
+    group_woodStock_ingredients_plural = "Raw Wood Products",
+    group_dye_ingredients = "Pigmented Object",
+    group_dye_ingredients_plural = "Pigmented Objects",
 }
 
 return localizations
