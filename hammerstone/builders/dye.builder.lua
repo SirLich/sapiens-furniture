@@ -14,21 +14,7 @@ local mat3Identity = mjm.mat3Identity
 -- Data
 ---------------------------------------------------------------------------------
 
-local dyeIngredients = {
-	red_dye = {
-		"poppyFlower",
-		"beetroot"
-	},
-	blue_dye ={
-		"flax"
-	}
-}
-
--- Extend dye colors with additional colors
-local colors = {
-	"blue",
-	"red"
-}
+local data = mjrequire "furniture/data"
 
 
 ---------------------------------------------------------------------------------
@@ -74,7 +60,7 @@ end
 -- Flattens the inner resources into a new list. So returns `flax` and `poppyFlower` (etc), without 'red_dye' (etc)
 local function flattenIngrediants()
 	local out = {}
-	for key, value in pairs(dyeIngredients) do
+	for key, value in pairs(data.dyeIngredients) do
 		for i, ingrediant in ipairs(value) do
 			table.insert(out, ingrediant)
 		end
@@ -85,7 +71,7 @@ end
 local function generateOutputByObject()
 	local out = {}
 
-	for key, value in pairs(dyeIngredients) do
+	for key, value in pairs(data.dyeIngredients) do
 		for i, ingrediant in ipairs(value) do
 			table.insert(out, {
 				input = ingrediant,
@@ -102,7 +88,7 @@ end
 local function generateClothOutputByObject()
 	local out = {}
 
-	for i, color in ipairs(colors) do
+	for i, color in ipairs(data.colors) do
 		table.insert(out, {
 			input = color .. "_dye",
 			output = {
@@ -134,7 +120,7 @@ end
 function gen:getModelRemaps()
 	local out = {}
 
-	for i, color in ipairs(colors) do
+	for i, color in ipairs(data.colors) do
 		local dye_identifier = color .. "_dye"
 		local cloth_identifier = color .. "_cloth"
 		local carpet_identifier = color .. "_carpetSection"
@@ -198,11 +184,11 @@ end
 -- @override
 function gen:getObjectConfigs()
 	local configs = {}
-	for i, color in ipairs(colors) do
+	for i, color in ipairs(data.colors) do
 		table.insert(configs, i, generateDye(color))
 	end
 
-	for i, color in ipairs(colors) do
+	for i, color in ipairs(data.colors) do
 		table.insert(configs, i, generateCloth(color))
 	end
 	return configs
@@ -317,7 +303,8 @@ function gen:getRecipeConfigs()
 					build_sequence = "grindingSequence"
 				}
 			}
-		}
+		},
+		
 	}
 end
 
