@@ -1,12 +1,12 @@
 # Sapiens: Furniture Mod
 
-Furniture is an 'Expansion Mod' for [Sapiens](https://www.playsapiens.com/), which introduces a collection of wooden chairs. All chairs can be
-sat in by Sapiens, and include various styling depending on the wood used.
+Furniture is an 'Expansion Mod' for [Sapiens](https://www.playsapiens.com/), which introduces a collection of wooden chairs. All chairs are fully functional, meaning they can be sat in by Sapiens, and provide a small mood
+boost, just like the base-game seating pptions. The chairs are styled depending on the wood used.
 
  - [STEAM LINK](https://steamcommunity.com/sharedfiles/filedetails/?id=2966227716)
 
 ## Using the Mod
- - The mod requires [Hammerstone](https://steamcommunity.com/sharedfiles/filedetails/?id=2840825226).
+ - This mod requires [Hammerstone Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2840825226).
  - [Join the discord for Support.](https://discord.gg/WnN8hj2Fyg)
 
 # Contents
@@ -29,4 +29,13 @@ After placing, your sapiens will enjoy to sit in the chairs. They have the highe
 
 ### Variations
 
-There are various material/model variations for the chairs, depending on the wood type you use. Experiment!
+There are various material/model variations for the chairs, depending on the wood type you used to create the stock. Experiment!
+
+# Changelog
+
+## 1.0.0
+
+The first [release](https://github.com/SirLich/sapiens-furniture/releases/tag/1.0.0) of furniture really just contains chairs. More to come!
+
+## 1.1.0
+ - 
