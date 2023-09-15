@@ -9,6 +9,16 @@ return {
 					type = "yUpForwardOnly"
 				}
 			}
+		},
+		{
+			identifier = "carpet",
+			comfort = 0.4,
+			nodes = {
+				{
+					key = "seatNode_1",
+					type = "yUpFlat"
+				}
+			}
 		}
 	},
 	hs_resource_groups = {
