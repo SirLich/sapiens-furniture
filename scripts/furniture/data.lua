@@ -5,20 +5,40 @@ local data = {
 	dyeIngredients = {
 		red_dye = {
 			"poppyFlower",
-			"beetroot"
+			"beetroot",
+			"raspberry"
+		},
+		orange_dye = {
+			"pumpkin",
+			"orange",
+		},
+		yellow_dye = {
+			"marigoldFlower",
+			"turmericRoot"
+		},
+		green_dye = {
+			"aloeLeaf"
 		},
 		blue_dye ={
 			"flax"
 		},
-		brown_dye = {
-
-		}
+		purple_dye ={
+			"elderberry"
+		},
+		pink_dye ={
+			"echinaceaFlower"
+		},
 	},
 
 	colors = {
-		"brown",
+		"red",
+		"orange",
+		"yellow",
+		"green",
 		"blue",
-		"red"
+		"purple",
+		"pink",
+		"brown"
 	}
 }
 

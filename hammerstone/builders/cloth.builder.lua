@@ -71,38 +71,6 @@ local function flattenIngrediants()
 	return out
 end
 
-local function generateOutputByObject()
-	local out = {}
-
-	for key, value in pairs(data.dyeIngredients) do
-		for i, ingrediant in ipairs(value) do
-			table.insert(out, {
-				input = ingrediant,
-				output = {
-					key
-				}
-			})
-		end
-	end
-
-	return out
-end
-
-local function generateClothOutputByObject()
-	local out = {}
-
-	for i, color in ipairs(data.colors) do
-		table.insert(out, {
-			input = color .. "_dye",
-			output = {
-				color .. "_cloth"
-			}
-		})
-	end
-
-	return out
-end
-
 
 ---------------------------------------------------------------------------------
 -- Generators
@@ -161,52 +129,39 @@ end
 
 local colorMultiplier = 0.8
 
+local function addMaterialColor(out, name, a, b, c)
+	table.insert(out,{
+		identifier =  name .. "_dye",
+		color = {
+			a, b, c
+		},
+		roughness = 0.7
+	})
+
+	table.insert(out,{
+		identifier =  name .. "_dye_dark",
+		color = {
+			a * 0.8, b * 0.8, c * 0.8
+		},
+		roughness = 0.7
+	})
+end
+
 -- @override
 function gen:getMaterials()
-	return {
-		{
-			identifier =  "red_dye",
-			color = {
-				0.5607843137254902, 0.17254901960784313, 0.17254901960784313
-			},
-			roughness = 0.7
-		},
-		{
-			identifier =  "red_dye_dark",
-			color = {
-				0.56 * colorMultiplier, 0.172 * colorMultiplier, 0.172 * colorMultiplier
-			},
-			roughness = 0.7
-		},
-		{
-			identifier =  "brown_dye",
-			color = {
-				0.3803921568627451,0.21568627450980393, 0.1411764705882353
-			},
-			roughness = 0.7
-		},
-		{
-			identifier =  "brown_dye_dark",
-			color = {
-				0.380 * colorMultiplier,0.215 * colorMultiplier, 0.1411 * colorMultiplier
-			},
-			roughness = 0.7
-		},
-		{
-			identifier = "blue_dye",
-			color = {
-				0.21568627450980393, 0.3411764705882353, 0.5490196078431373
-			},
-			roughness = 0.7
-		},
-		{
-			identifier = "blue_dye_dark",
-			color = {
-				0.21 * colorMultiplier, 0.34 * colorMultiplier, 0.54 * colorMultiplier
-			},
-			roughness = 0.7
-		},
-	}
+	local out = {}
+
+	addMaterialColor(out, "red", 0.56, 0.1725, 0.1725)
+	addMaterialColor(out, "orange", 0.988, 0.580, 0.01)
+	addMaterialColor(out, "yellow", 1, 0.7725, 0.141)
+	addMaterialColor(out, "green", 0.364, 0.58039, 0.207)
+	addMaterialColor(out, "blue", 0.215, 0.3411, 0.5493)
+	addMaterialColor(out, "pink", 0.921,0.533, 0.8627)
+	addMaterialColor(out, "purple", 0.380, 0.0588, 0.4901)
+	addMaterialColor(out, "brown", 0.3803,0.215, 0.1411)
+
+
+	return out
 end
 
 -- @override
@@ -222,118 +177,5 @@ function gen:getObjectConfigs()
 	return configs
 end
 
-
--- @override
-function gen:getRecipeConfigs()
-	local gameObject = moduleManager:get("gameObject")
-	return {
-		{
-			description = {
-				identifier = "dye_recipe",
-				name = "Dye"
-			},
-			components = {
-				hs_recipe = {
-					display_object = "red_dye",
-					classification = "craft",
-					props = {
-						dontPickUpRequiredTool = true,
-						temporaryToolObjectType = gameObject.typeIndexMap.rockSmall,
-						temporaryToolOffset = vec3(0.0,0.01,0.0),
-						temporaryToolRotation = mat3Identity,
-						placeBuildObjectsInFinalLocationsOnDropOff = true,
-					}
-				},
-				hs_requirements = {
-					skills = {
-						"grinding"
-					},
-					resources = {
-						{
-							resource = "firedBowl",
-							action = {
-								action_type = "inspect",
-								duration = 0.4,
-								duration_without_skill = 15
-							}
-						},
-						{
-							resource_group = "dye_ingredients",
-							action = {
-								action_type = "inspect",
-								duration = 0.4,
-								duration_without_skill = 15
-							}
-						}
-					},
-					tools = {
-						"grinding"
-					}
-				},
-				hs_output = {
-					output_by_object = generateOutputByObject()
-				},
-				hs_build_sequence = {
-					build_model = "craftMedicine",
-					build_sequence = "grindingSequence"
-				}
-			}
-		},
-		{
-			description = {
-				identifier = "dye_cloth_recipe",
-				name = "Dyed Cloth",
-				summary = "Applies color to your cloth pieces."
-			},
-			components = {
-				hs_recipe = {
-					display_object = "red_cloth",
-					classification = "craft",
-					props = {
-						dontPickUpRequiredTool = true,
-						temporaryToolObjectType = gameObject.typeIndexMap.rockSmall,
-						temporaryToolOffset = vec3(0.0,0.01,0.0),
-						temporaryToolRotation = mat3Identity,
-						placeBuildObjectsInFinalLocationsOnDropOff = true,
-					}
-				},
-				hs_requirements = {
-					skills = {
-						"grinding"
-					},
-					resources = {
-						{
-							resource = "dye",
-							action = {
-								action_type = "inspect",
-								duration = 0.4,
-								duration_without_skill = 15
-							}
-						},
-						{
-							resource = "cloth",
-							action = {
-								action_type = "inspect",
-								duration = 0.4,
-								duration_without_skill = 15
-							}
-						}
-					},
-					tools = {
-						"grinding"
-					}
-				},
-				hs_output = {
-					output_by_object = generateClothOutputByObject()
-				},
-				hs_build_sequence = {
-					build_model = "craftMedicine",
-					build_sequence = "grindingSequence"
-				}
-			}
-		},
-		
-	}
-end
 
 return gen
