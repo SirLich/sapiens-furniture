@@ -38,4 +38,6 @@ There are various material/model variations for the chairs, depending on the woo
 The first [release](https://github.com/SirLich/sapiens-furniture/releases/tag/1.0.0) of furniture really just contains chairs. More to come!
 
 ## 1.1.0
- - 
+ - Fixes issue which caused game-crashes
+
+## 2.0.0

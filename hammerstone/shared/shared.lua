@@ -40,6 +40,14 @@ return {
 			},
 			metal = 0,
 			roughness = 0.8
+		},
+		{
+			identifier = "cloth",
+			color = {
+				 0.78, 0.356, 0.21
+			},
+			metal = 0,
+			roughness = 0.8
 		}
 	}
 }

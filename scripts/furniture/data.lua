@@ -1,3 +1,6 @@
+--- Furniture: data.lua
+--- @author SirLich
+
 local data = {
 	dyeIngredients = {
 		red_dye = {

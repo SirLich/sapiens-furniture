@@ -4,6 +4,7 @@ local gen = {}
 
 -- Hammerstone
 local moduleManager = mjrequire "hammerstone/state/moduleManager"
+local utils = mjrequire "hammerstone/object/objectUtils"
 
 -- Math
 local mjm = mjrequire "common/mjm"
@@ -23,11 +24,12 @@ local data = mjrequire "furniture/data"
 
 local function generateCloth(color)
 	local identifier = color .. "_cloth"
+	local name = utils:capsCase(color .. " Cloth")
 	return {
 		description = {
 			identifier = identifier,
-			name = identifier,
-			plural = identifier,
+			name = name,
+			plural = name,
 			summary = "cloth_summary"
 		},
 		components = {
@@ -41,11 +43,12 @@ end
 
 local function generateDye(color)
 	local identifier = color .. "_dye"
+	local name = utils:capsCase(color .. " Dye")
 	return {
 		description = {
 			identifier = identifier,
-			name = identifier,
-			plural = identifier,
+			name = name,
+			plural = name,
 			summary = "dye_summary"
 		},
 		components = {
@@ -202,7 +205,7 @@ function gen:getRecipeConfigs()
 		{
 			description = {
 				identifier = "dye_recipe",
-				name = "Craft Dye"
+				name = "Dye"
 			},
 			components = {
 				hs_recipe = {
@@ -254,8 +257,8 @@ function gen:getRecipeConfigs()
 		{
 			description = {
 				identifier = "dye_cloth_recipe",
-				name = "Dye the Cloth",
-				summary = "Dye the cloth!"
+				name = "Dyed Cloth",
+				summary = "Applies color to your cloth pieces."
 			},
 			components = {
 				hs_recipe = {
