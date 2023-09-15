@@ -5,7 +5,7 @@ localizations.values = {
     woodStock_summary = "Refined wood parts. Used to build furniture.",
     object_woodStock = "Wood Stock",
     object_woodStock_plural = "Wood Stock",
-    
+
     -- DYE
     dye_summary = "All natural dyes.",
     object_dye = "Dye Bowl",
@@ -13,6 +13,11 @@ localizations.values = {
 
     red_dye = "Red Dye",
     blue_dye = "Blue Dye",
+
+    object_carpet = "Carpet",
+    object_carpet_plural = "Carpet",
+    object_carpet_summary = "A comfortable ground covering",
+
 
     aspen_woodStock = "Aspen Wood Stock",
     birch_woodStock = "Birch Wood Stock",

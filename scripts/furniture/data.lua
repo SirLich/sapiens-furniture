@@ -11,7 +11,7 @@ local data = {
 			"flax"
 		},
 		brown_dye = {
-	
+
 		}
 	},
 

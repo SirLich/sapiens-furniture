@@ -40,4 +40,5 @@ The first [release](https://github.com/SirLich/sapiens-furniture/releases/tag/1.
 ## 1.1.0
  - Fixes issue which caused game-crashes
 
-## 2.0.0
+## 1.2.0
+ - Adds dye, cloth, and carpet.

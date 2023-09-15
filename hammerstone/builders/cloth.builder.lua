@@ -4,7 +4,7 @@ local gen = {}
 
 -- Hammerstone
 local moduleManager = mjrequire "hammerstone/state/moduleManager"
-local utils = mjrequire "hammerstone/object/objectUtils"
+local utils = mjrequire "hammerstone/utils/utils"
 
 -- Math
 local mjm = mjrequire "common/mjm"
@@ -24,7 +24,7 @@ local data = mjrequire "furniture/data"
 
 local function generateCloth(color)
 	local identifier = color .. "_cloth"
-	local name = utils:capsCase(color .. " Cloth")
+	local name = utils:capsCase(color .. " cloth")
 	return {
 		description = {
 			identifier = identifier,
@@ -43,7 +43,7 @@ end
 
 local function generateDye(color)
 	local identifier = color .. "_dye"
-	local name = utils:capsCase(color .. " Dye")
+	local name = utils:capsCase(color .. " dye")
 	return {
 		description = {
 			identifier = identifier,
@@ -141,7 +141,8 @@ function gen:getModelRemaps()
 			model = cloth_identifier,
 			base_model =  "cloth",
 			material_remaps = {
-				cloth = dye_identifier
+				cloth = dye_identifier,
+				clothDark = dye_identifier .. "_dark"
 			}
 		})
 
@@ -149,13 +150,16 @@ function gen:getModelRemaps()
 			model = carpet_identifier,
 			base_model =  "carpetSection",
 			material_remaps = {
-				brown_dye = dye_identifier
+				cloth = dye_identifier,
+				clothDark = dye_identifier .. "_dark"
 			}
 		})
 	end
 
 	return out
 end
+
+local colorMultiplier = 0.8
 
 -- @override
 function gen:getMaterials()
@@ -168,6 +172,13 @@ function gen:getMaterials()
 			roughness = 0.7
 		},
 		{
+			identifier =  "red_dye_dark",
+			color = {
+				0.56 * colorMultiplier, 0.172 * colorMultiplier, 0.172 * colorMultiplier
+			},
+			roughness = 0.7
+		},
+		{
 			identifier =  "brown_dye",
 			color = {
 				0.3803921568627451,0.21568627450980393, 0.1411764705882353
@@ -175,9 +186,23 @@ function gen:getMaterials()
 			roughness = 0.7
 		},
 		{
+			identifier =  "brown_dye_dark",
+			color = {
+				0.380 * colorMultiplier,0.215 * colorMultiplier, 0.1411 * colorMultiplier
+			},
+			roughness = 0.7
+		},
+		{
 			identifier = "blue_dye",
 			color = {
 				0.21568627450980393, 0.3411764705882353, 0.5490196078431373
+			},
+			roughness = 0.7
+		},
+		{
+			identifier = "blue_dye_dark",
+			color = {
+				0.21 * colorMultiplier, 0.34 * colorMultiplier, 0.54 * colorMultiplier
 			},
 			roughness = 0.7
 		},
