@@ -118,16 +118,14 @@ function gen:getModelRemaps()
 			model = carpet_identifier,
 			base_model =  "carpetSection",
 			material_remaps = {
-				cloth = dye_identifier,
-				clothDark = dye_identifier .. "_dark"
+				brown_dye = dye_identifier,
+				brown_dye_dark = dye_identifier .. "_dark"
 			}
 		})
 	end
 
 	return out
 end
-
-local colorMultiplier = 0.8
 
 local function addMaterialColor(out, name, a, b, c)
 	table.insert(out,{

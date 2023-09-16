@@ -7,7 +7,7 @@ return {
 	},
 	components = {
 		hs_resource = {
-			display_object = "red_cloth",
+			display_object = "brown_cloth",
 			storage_identifier = "cloth_storage"
 		}
 	}

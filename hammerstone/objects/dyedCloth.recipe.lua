@@ -17,7 +17,7 @@ return {
 		identifier = "red_cloth",
 		name = "Dyed Cloth",
 		plural = "Dyed Cloth",
-		summary = "Apply dye bowls to cloth, to create beautiful textiles."
+		summary = "Apply dye to cloth, to create beautiful textiles."
 	},
 	components = {
 		hs_craftable = {
