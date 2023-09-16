@@ -5,7 +5,8 @@ local function generateOutputByObject()
 
 	for i, color in ipairs(data.colors) do
 		out[color .. "_dye"] = {
-			color .. "_cloth"
+			color .. "_cloth",
+			"firedBowl"
 		}
 	end
 
