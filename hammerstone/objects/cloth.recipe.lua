@@ -3,7 +3,7 @@ return {
 		identifier = "brown_cloth", -- Sort of a bug work-around. We need a valid game-object identifier to harness the recipe to.
 		name = "Cloth",
 		plural = "Cloth",
-		description = "A refined cloth material, which can be used for furthe crafting."
+		summary = "A refined textile, which can be used for further crafting."
 	},
 	components = {
 		hs_craftable = {
