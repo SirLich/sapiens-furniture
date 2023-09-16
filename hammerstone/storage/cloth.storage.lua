@@ -14,7 +14,7 @@ return {
 			offset = {0, 0.01, 0}
 		},
 		hs_storage = {
-			place_offset = {0.0, -0.2, 0.0},
+			place_offset = {0.0, -0.01, 0.0},
 			display_object = "red_cloth",
 			item_size = {0.6, 0.2, 0.6},
 			random_rotation_weight = 0.2,
