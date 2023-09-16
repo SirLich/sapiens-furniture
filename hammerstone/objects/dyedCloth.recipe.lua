@@ -21,7 +21,7 @@ return {
 	},
 	components = {
 		hs_craftable = {
-			skill = "spinning",
+			skill = "toolAssembly",
 			research = "potteryFiring",
 
 			build_sequence = "researchBuildSequence",

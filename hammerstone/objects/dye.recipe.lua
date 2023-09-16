@@ -29,7 +29,7 @@ return {
 	},
 	components = {
 		hs_craftable = {
-			skill = "spinning",
+			skill = "medicine",
 			research = "potteryFiring",
 			tool = "grinding",
 

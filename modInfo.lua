@@ -1,7 +1,7 @@
 local modInfo = {
     name = "Furniture",
-    description = "An expansion mod for Sapiens, introducing wooden chairs. More to come!",
-    version = "1.0.0",
+    description = "An expansion mod for Sapiens, introducing wooden chairs and carpets.",
+    version = "1.2.0",
     type = "world",
     developer = "SirLich",
     loadOrder = 1,

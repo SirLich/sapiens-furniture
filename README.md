@@ -41,4 +41,7 @@ The first [release](https://github.com/SirLich/sapiens-furniture/releases/tag/1.
  - Fixes issue which caused game-crashes
 
 ## 1.2.0
- - Adds dye, cloth, and carpet.
+ - Adds new 'dye' recipe, which can be crafted from fired bowl and various colorful pigments
+ - Adds new 'cloth' recipe, which can be crafted from woolskins
+ - Adds new 'dyed cloth' system, which allows combining cloth and dye together
+ - Adds new 'carpet' buildable, which can be built from four cloth sections, of assorted colors.
