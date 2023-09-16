@@ -25,7 +25,7 @@ return {
 		identifier = "red_dye",
 		name = "Dye",
 		plural = "Dye",
-		description = "A bowl of pigment which can be used to dye fabric."
+		summary = "A bowl of pigment which can be used to dye fabric."
 	},
 	components = {
 		hs_craftable = {
