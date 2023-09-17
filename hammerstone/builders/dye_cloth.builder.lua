@@ -91,11 +91,19 @@ end
 function gen:getModelRemaps()
 	local out = {}
 
+
 	for i, color in ipairs(data.colors) do
 		local dye_identifier = color .. "_dye"
 		local cloth_identifier = color .. "_cloth"
 		local carpet_identifier = color .. "_carpetSection"
+		local clothDoorLeft_identifier = color .. "_clothDoorSection_left"
+		local clothDoorRight_identifier = color .. "_clothDoorSection_right"
 
+		-- Default shared material remaps
+		local materialRemaps = {
+			brown_dye = dye_identifier,
+			brown_dye_dark = dye_identifier .. "_dark"
+		}
 
 		table.insert(out, {
 			model = dye_identifier,
@@ -108,19 +116,25 @@ function gen:getModelRemaps()
 		table.insert(out,{
 			model = cloth_identifier,
 			base_model =  "cloth",
-			material_remaps = {
-				cloth = dye_identifier,
-				clothDark = dye_identifier .. "_dark"
-			}
+			material_remaps = materialRemaps
 		})
 
 		table.insert(out,{
 			model = carpet_identifier,
 			base_model =  "carpetSection",
-			material_remaps = {
-				brown_dye = dye_identifier,
-				brown_dye_dark = dye_identifier .. "_dark"
-			}
+			material_remaps = materialRemaps
+		})
+
+		table.insert(out,{
+			model = clothDoorLeft_identifier,
+			base_model =  "clothDoorSection_left",
+			material_remaps = materialRemaps
+		})
+
+		table.insert(out,{
+			model = clothDoorRight_identifier,
+			base_model =  "clothDoorSection_right",
+			material_remaps = materialRemaps
 		})
 	end
 
