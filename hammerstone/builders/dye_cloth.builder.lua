@@ -150,10 +150,11 @@ local function addMaterialColor(out, name, a, b, c)
 		roughness = 0.7
 	})
 
+	local strength = 0.5;
 	table.insert(out,{
 		identifier =  name .. "_dye_dark",
 		color = {
-			a * 0.8, b * 0.8, c * 0.8
+			a * strength, b * strength, c * strength
 		},
 		roughness = 0.7
 	})
@@ -164,12 +165,12 @@ function gen:getMaterials()
 	local out = {}
 
 	addMaterialColor(out, "red", 0.56, 0.1725, 0.1725)
-	addMaterialColor(out, "orange", 0.988, 0.580, 0.01)
-	addMaterialColor(out, "yellow", 1, 0.7725, 0.141)
-	addMaterialColor(out, "green", 0.364, 0.58039, 0.207)
+	addMaterialColor(out, "orange", 199/255, 125/255, 14/255)
+	addMaterialColor(out, "yellow", 207/255, 214/255, 79/255)
+	addMaterialColor(out, "green", 39/255, 97/255, 41/255)
 	addMaterialColor(out, "blue", 0.215, 0.3411, 0.5493)
-	addMaterialColor(out, "pink", 0.921,0.533, 0.8627)
-	addMaterialColor(out, "purple", 0.380, 0.0588, 0.4901)
+	addMaterialColor(out, "pink", 171/255, 91/255, 168/255)
+	addMaterialColor(out, "purple", 96/255, 66/255, 150/255)
 	addMaterialColor(out, "brown", 0.3803,0.215, 0.1411)
 
 

@@ -3,7 +3,7 @@ local data = mjrequire "furniture/data"
 local function getRemaps(direction)
 	local remapTable = {}
 	for _, color in ipairs(data.colors) do
-		remapTable[color .. "_cloth"] = color .. "_" .. "_clothDoorSection_" .. direction
+		remapTable[color .. "_cloth"] = color .. "_clothDoorSection_" .. direction
 	end
 	return remapTable
 end

@@ -51,3 +51,4 @@ The first [release](https://github.com/SirLich/sapiens-furniture/releases/tag/1.
 
 ## 1.3.0
  - Added new 'Cloth Door' buildable
+ - Adjusted color schemes for colors
