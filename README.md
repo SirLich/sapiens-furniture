@@ -48,3 +48,6 @@ The first [release](https://github.com/SirLich/sapiens-furniture/releases/tag/1.
  
 ## 1.2.1
  - Fixes issue where fired bowls were not returned when using dye on cloth
+
+## 1.3.0
+ - Added new 'Cloth Door' buildable

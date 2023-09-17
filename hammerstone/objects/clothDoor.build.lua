@@ -10,11 +10,14 @@ end
 
 return {
 	description = {
-		identifier = "carpet"
+		identifier = "cloth_door",
+		name = "Cloth Door",
+		plural = "Cloth Door",
+		summary = "A hanging cloth doorway, which will allow sapiens to pass through."
 	},
 	components = {
 		hs_object = {
-			model = "carpet"
+			model = "clothDoor"
 		},
 		hs_buildable = {
 			skill = "basicBuilding",
