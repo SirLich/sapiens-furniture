@@ -39,7 +39,35 @@ local data = {
 		"purple",
 		"pink",
 		"brown"
+	},
+
+	woodTypes = {
+		"aspen",
+		"birch",
+	
+		"bamboo",
+		"coconut",
+	
+		"pine",
+	
+		"willow",
+		"peach",
+		"orange",
+		"apple",
+		"elderberry"
 	}
 }
+
+function data:getRemaps(baseModel, underscore)
+	local remapTable = {}
+	for _, woodType in ipairs(data.woodTypes) do
+		if underscore then
+			remapTable[woodType .. "_woodStock"] = woodType .. "_" .. baseModel -- 'aspen_woodStock' = 'aspen_chairBack' etc.
+		else
+			remapTable[woodType .. "_woodStock"] = woodType .. baseModel -- 'aspen_woodStock' = 'aspenChairBack' etc.
+		end
+	end
+	return remapTable
+end
 
 return data

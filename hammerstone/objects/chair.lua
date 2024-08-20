@@ -1,26 +1,4 @@
-local woodTypes = {
-	"aspen",
-	"birch",
-
-	"bamboo",
-	"coconut",
-
-	"pine",
-
-	"willow",
-	"peach",
-	"orange",
-	"apple",
-	"elderberry"
-}
-
-local function getRemaps(baseModel)
-	local remapTable = {}
-	for _, woodType in ipairs(woodTypes) do
-		remapTable[woodType .. "_woodStock"] = woodType .. "_" .. baseModel -- 'aspen_woodStock' = 'aspen_chairBack' etc.
-	end
-	return remapTable
-end
+local data = mjrequire "furniture/data"
 
 return {
 	description = {
@@ -46,37 +24,37 @@ return {
 					key = "woodStock_1",
 					default_model = "chairLeg",
 					resource = "woodStock",
-					remaps = getRemaps("chairLeg")
+					remaps = data:getRemaps("chairLeg")
 				},
 				{
 					key = "woodStock_2",
 					default_model = "chairLeg",
 					resource = "woodStock",
-					remaps = getRemaps("chairLeg")
+					remaps = data:getRemaps("chairLeg")
 				},
 				{
 					key = "woodStock_3",
 					default_model = "chairLeg",
 					resource = "woodStock",
-					remaps = getRemaps("chairLeg")
+					remaps = data:getRemaps("chairLeg")
 				},
 				{
 					key = "woodStock_4",
 					default_model = "chairLeg",
 					resource = "woodStock",
-					remaps = getRemaps("chairLeg")
+					remaps = data:getRemaps("chairLeg")
 				},
 				{
 					key = "woodStock_5",
 					default_model = "chairSeat",
 					resource = "woodStock",
-					remaps = getRemaps("chairSeat")
+					remaps = data:getRemaps("chairSeat")
 				},
 				{
 					key = "woodStock_6",
 					default_model = "chairBack",
 					resource = "woodStock",
-					remaps = getRemaps("chairBack")
+					remaps = data:getRemaps("chairBack")
 				},
 				{
 					key = "woodStock_store",

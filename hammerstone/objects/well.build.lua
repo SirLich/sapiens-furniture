@@ -1,3 +1,4 @@
+local data = mjrequire "furniture/data"
 
 local mudBrickKilnSectionRemaps = {
 	mudBrickDry_sand = "mudBrickKilnSection_sand",
@@ -6,9 +7,19 @@ local mudBrickKilnSectionRemaps = {
 	mudBrickDry_redSand = "mudBrickKilnSection_redSand",
 }
 
+local mudBrickKilnSectionRemaps = {
+	mudBrickDry_sand = "mudBrickKilnSectionWithOpening_sand",
+	mudBrickDry_hay = "mudBrickKilnSectionWithOpening_hay",
+	mudBrickDry_riverSand ="mudBrickKilnSectionWithOpening_riverSand",
+	mudBrickDry_redSand = "mudBrickKilnSectionWithOpening_redSand",
+}
+
 return {
 	description = {
-		identifier = "well"
+		identifier = "well",
+		name = "Decorative Well",
+		plural = "Decorative Wells",
+		summary = "The perfect stop for a thirsty sapien..."
 	},
 	components = {
 		hs_object = {
@@ -35,25 +46,25 @@ return {
 			model_placeholder = {
 				{
 					key = "mudBrickDry_1",
-					default_model = "mudBrickKilnSection",
+					default_model = "mudBrickKilnSection_sand",
 					resource = "mudBrickDry",
 					remaps = mudBrickKilnSectionRemaps
 				},
 				{
 					key = "mudBrickDry_2",
-					default_model = "mudBrickKilnSection",
+					default_model = "mudBrickKilnSection_sand",
 					resource = "mudBrickDry",
 					remaps = mudBrickKilnSectionRemaps
 				},
 				{
 					key = "mudBrickDry_3",
-					default_model = "mudBrickKilnSection",
+					default_model = "mudBrickKilnSection_sand",
 					resource = "mudBrickDry",
 					remaps = mudBrickKilnSectionRemaps
 				},
 				{
 					key = "mudBrickDry_4",
-					default_model = "mudBrickKilnSectionWithOpening",
+					default_model = "mudBrickKilnSectionWithOpening_sand",
 					resource = "mudBrickDry",
 					remaps = mudBrickKilnSectionRemaps
 				},
@@ -62,22 +73,26 @@ return {
 				{
 					key = "branch_1",
 					default_model = "birchBranch",
-					resource = "branch"
+					resource = "branch",
+					remaps = data:getRemaps("branch")
 				},
 				{
 					key = "branch_2",
 					default_model = "birchBranch",
-					resource = "branch"
+					resource = "branch",
+					remaps = data:getRemaps("branch")
 				},
 				{
 					key = "branch_3",
 					default_model = "birchBranchHalf",
-					resource = "branch"
+					resource = "branch",
+					remaps = data:getRemaps("branch")
 				},
 				{
 					key = "branch_4",
 					default_model = "birchBranchHalf",
-					resource = "branch"
+					resource = "branch",
+					remaps = data:getRemaps("branch")
 				},
 
 
