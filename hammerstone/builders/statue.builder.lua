@@ -11,15 +11,10 @@ local moduleManager = mjrequire "hammerstone/state/moduleManager"
 
 local mainStatue = "alpaca"
 local statueTypes = {
-	"alpaca",
+	"mammoth",
 	"chicken"
 }
 
-local function getStatueTypes()
-	local allStatues = utils:deepcopy(statueTypes)
-	table.insert(allStatues, mainStatue)
-	return allStatues
-end
 
 -- A list of basic models, which need to be remaped
 local baseModels = {
@@ -81,7 +76,7 @@ function builder:getModelRemaps()
 end
 
 local function generateObject(statueType, isMain)
-	local identifier = statueType .. "_statue" -- e.g., mammoth_statue
+	local identifier = "statue_" .. statueType -- e.g., statue_mammoth
 
 	return {
 		description = {
@@ -111,11 +106,11 @@ local function generateObject(statueType, isMain)
 						key = "stoneStock_1",
 						default_model = "statue_base",
 						resource = "stoneStock",
-						remaps = getRemaps(identifier)
+						remaps = getRemaps("statue_base")
 					},
 					{
 						key = "stoneStock_2",
-						default_model = "statue_alpaca",
+						default_model = identifier,
 						resource = "stoneStock",
 						remaps = getRemaps(identifier)
 					},
