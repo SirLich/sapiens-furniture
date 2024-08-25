@@ -36,7 +36,7 @@ local function getVariations(isMain)
 
 	local ret = {}
 
-	for statue in statueTypes do
+	for _, statue in ipairs(statueTypes) do
 		table.insert(ret, statue .. "statue")
 	end
 end
@@ -87,7 +87,7 @@ local function generateObject(statueType, isMain)
 		description = {
 			identifier = identifier,
 			name = identifier .. "_name",
-			plural = identifier .. "_plural",
+			plural = "Statues",
 			summary = "Stone carved offering."
 		},
 		components = {

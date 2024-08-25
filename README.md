@@ -35,13 +35,23 @@ There are various material/model variations for the chairs, depending on the woo
 
 # Changelog
 
-## 1.0.0
+## 1.4.0
 
-The first [release](https://github.com/SirLich/sapiens-furniture/releases/tag/1.0.0) of furniture really just contains chairs. More to come!
+- Adds Refined Stone resource, similar to Wood Stock
+- Adds statues which use the new Refined Stone resource (alpaca, chicken, mammoth)
 
-## 1.1.0
+## 1.4.0
 
-- Fixes issue which caused game-crashes
+- Add well
+
+## 1.3.0
+
+- Added new 'Cloth Door' buildable
+- Adjusted color schemes for colors
+
+## 1.2.1
+
+- Fixes issue where fired bowls were not returned when using dye on cloth
 
 ## 1.2.0
 
@@ -50,15 +60,10 @@ The first [release](https://github.com/SirLich/sapiens-furniture/releases/tag/1.
 - Adds new 'dyed cloth' system, which allows combining cloth and dye together
 - Adds new 'carpet' buildable, which can be built from four cloth sections, of assorted colors.
 
-## 1.2.1
+## 1.1.0
 
-- Fixes issue where fired bowls were not returned when using dye on cloth
+- Fixes issue which caused game-crashes
 
-## 1.3.0
+## 1.0.0
 
-- Added new 'Cloth Door' buildable
-- Adjusted color schemes for colors
-
-## 1.4.0
-
-- Add well
+The first [release](https://github.com/SirLich/sapiens-furniture/releases/tag/1.0.0) of furniture really just contains chairs. More to come!

@@ -50,6 +50,11 @@ localizations.values = {
     group_woodStock_ingredients_plural = "Raw Wood Products",
     group_dye_ingredients = "Pigmented Object",
     group_dye_ingredients_plural = "Pigmented Objects",
+
+    -- Statues
+    alpaca_statue_name = "Alpaca Statue",
+    mammoth_statue_name = "Mammoth Statue",
+    chicken_statue_name = "Chicken Statue",
 }
 
 return localizations

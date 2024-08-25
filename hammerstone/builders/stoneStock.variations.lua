@@ -59,17 +59,6 @@ local function generateObject(stoneType)
 	}
 end
 
-function builder:getResourceGroups()
-	return {
-		{
-			identifier = "dye_ingredients",
-			display_object = "red_dye",
-			resources = flattenIngrediants()
-		}
-	}
-end
-
-
 function builder:getObjectConfigs()
 	local configs = {}
 	for _, woodType in ipairs(stoneTypes) do
