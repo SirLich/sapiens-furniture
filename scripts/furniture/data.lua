@@ -55,6 +55,24 @@ local data = {
 		"orange",
 		"apple",
 		"elderberry"
+	},
+
+	stoneTypes = {
+		"rock",
+		"limestone",
+		"sandstoneYellowRock",
+		"sandstoneRedRock",
+		"sandstoneOrangeRock",
+		"sandstoneBlueRock",
+		"redRock",
+		"greenRock",
+		"graniteRock",
+		"marbleRock",
+		"lapisRock"
+	},
+
+	stoneIngredients = {
+		
 	}
 }
 

@@ -1,6 +1,12 @@
 local localizations = {}
 
 localizations.values = {
+
+    -- WOOD STOCK
+    stoneStock_summary = "Refined stone primitives. Used to build decorations.",
+    object_stoneStock = "Refined Stone",
+    object_stoneStock_plural = "Refined Stone",
+
     -- WOOD STOCK
     woodStock_summary = "Refined wood parts. Used to build furniture.",
     object_woodStock = "Wood Stock",
@@ -32,7 +38,7 @@ localizations.values = {
 
 
     -- STORAGE AREAS
-    storage_woodStock_storage = "Wood Stock",
+    storage_woodStock_storage = "Refined Resources",
 
     -- OBJECTS
     object_chair = "Wooden Chair",
