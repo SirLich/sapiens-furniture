@@ -38,9 +38,10 @@ There are various material/model variations for the chairs, depending on the woo
 ## 1.5.0
 
  - Fixes chairs being unable to be constructed
- - Fixed statues showing wrong models
  - Fixed statues having wrong names
- 
+
+Issue persists where all statues show Alpacas. I hope to fix this in future version.
+
 ## 1.4.0
 
 - Adds Refined Stone resource, similar to Wood Stock

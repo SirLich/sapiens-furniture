@@ -36,6 +36,18 @@ localizations.values = {
     coconut_woodStock = "Coconut Wood Stock",
     apple_woodStock = "Apple Wood Stock",
 
+    rock_stoneStock = "Refined Stone",
+	limestone_stoneStock = "Refined Limestone",
+	sandstoneYellowRock_stoneStock = "Refined Yellow Sandstone",
+	sandstoneRedRock_stoneStock = "Refined Red Sandstone",
+	sandstoneOrangeRock_stoneStock = "Refined Orange Sandstone",
+	sandstoneBlueRock_stoneStock = "Refined Blue Sandstone",
+	redRock_stoneStock = "Refined Red Rock",
+	greenRock_stoneStock = "Refined Green Rock",
+	graniteRock_stoneStock = "Refined Granite",
+	marbleRock_stoneStock = "Refined Marble",
+	lapisRock_stoneStock = "Refined Lapis",
+
 
     -- STORAGE AREAS
     storage_woodStock_storage = "Refined Resources",
@@ -52,9 +64,9 @@ localizations.values = {
     group_dye_ingredients_plural = "Pigmented Objects",
 
     -- Statues
-    alpaca_statue_name = "Alpaca Statue",
-    mammoth_statue_name = "Mammoth Statue",
-    chicken_statue_name = "Chicken Statue",
+    statue_alpaca_name = "Alpaca Statue",
+    statue_mammoth_name = "Mammoth Statue",
+    statue_chicken_name = "Chicken Statue",
 }
 
 return localizations

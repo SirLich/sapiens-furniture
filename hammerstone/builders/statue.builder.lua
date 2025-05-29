@@ -34,12 +34,15 @@ local function getVariations(isMain)
 	for _, statue in ipairs(statueTypes) do
 		table.insert(ret, statue .. "statue")
 	end
+
+	return ret
 end
 
 --- statueIdentifier = e.g. statue_alpaca
 local function getRemaps(statueIdentifier)
 	local remapTable = {}
 	for _, stoneType in ipairs(data.stoneTypes) do
+		
 		remapTable[stoneType .. "_stoneStock"] = stoneType .. "_" .. statueIdentifier -- 'sandstoneYellowRock_stoneStock' = 'sandstoneYellowRock_statue_alpaca' etc.
 	end
 	return remapTable
@@ -75,8 +78,8 @@ function builder:getModelRemaps()
 	return configs
 end
 
-local function generateObject(statueType, isMain)
-	local identifier = "statue_" .. statueType -- e.g., statue_mammoth
+local function generateObject(statueType)
+	local identifier = "statue_"..statueType
 
 	return {
 		description = {
@@ -90,7 +93,6 @@ local function generateObject(statueType, isMain)
 				model = "statue"
 			},
 			hs_buildable = {
-				props = getVariations(isMain),
 				skill = "chiselStone",
 				tool = "softChiselling",
 				build_sequence = "clearObjectsAndTerrainSequence",
@@ -128,9 +130,9 @@ end
 function builder:getObjectConfigs()
 	local configs = {}
 	for _, statueType in ipairs(statueTypes) do
-		table.insert(configs, generateObject(statueType, false))
+		table.insert(configs, generateObject(statueType))
 	end
-	table.insert(configs, generateObject(mainStatue, true))
+	table.insert(configs, generateObject(mainStatue))
 
 	return configs
 end
