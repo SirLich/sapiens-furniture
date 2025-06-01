@@ -81,16 +81,16 @@ end
 local function generateObject(statueType)
 	local identifier = "statue_"..statueType
 
-	return {
+	local result = {
 		description = {
 			identifier = identifier,
 			name = identifier .. "_name",
 			plural = "Statues",
-			summary = "Stone carved offering."
+			summary = "Stone carved offering.",
 		},
 		components = {
 			hs_object = {
-				model = "statue"
+				model = "build_" .. statueType -- e.g., build_alpaca
 			},
 			hs_buildable = {
 				skill = "chiselStone",
@@ -125,6 +125,8 @@ local function generateObject(statueType)
 			}
 		}
 	}
+	mj:log(result)
+	return result
 end
 
 function builder:getObjectConfigs()
