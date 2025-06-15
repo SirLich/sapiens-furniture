@@ -98,6 +98,8 @@ function gen:getModelRemaps()
 		local carpet_identifier = color .. "_carpetSection"
 		local clothDoorLeft_identifier = color .. "_clothDoorSection_left"
 		local clothDoorRight_identifier = color .. "_clothDoorSection_right"
+		local tapestry_identifier = color .. "_tapestry"
+		local tapestryHangings_identifier = color .. "_tapestryHangings"
 
 		-- Default shared material remaps
 		local materialRemaps = {
@@ -134,6 +136,18 @@ function gen:getModelRemaps()
 		table.insert(out,{
 			model = clothDoorRight_identifier,
 			base_model =  "clothDoorSection_right",
+			material_remaps = materialRemaps
+		})
+
+		table.insert(out,{
+			model = tapestry_identifier,
+			base_model =  "tapestry",
+			material_remaps = materialRemaps
+		})
+
+		table.insert(out,{
+			model = tapestryHangings_identifier,
+			base_model =  "tapestryHangings",
 			material_remaps = materialRemaps
 		})
 	end

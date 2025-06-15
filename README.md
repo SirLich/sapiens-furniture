@@ -35,6 +35,10 @@ There are various material/model variations for the chairs, depending on the woo
 
 # Changelog
 
+## 1.6.0
+
+ - Adds alpaca tapestry
+
 ## 1.5.1
 
  - Fixes the statues having incorrect models
