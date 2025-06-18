@@ -1,4 +1,7 @@
 return {
+	hs_rebuild_groups = {
+		"statue"
+	},
 	hs_seat_types = {
 		{
 			identifier = "chair",
