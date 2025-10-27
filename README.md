@@ -35,6 +35,10 @@ There are various material/model variations for the chairs, depending on the woo
 
 # Changelog
 
+## 1.6.1
+
+ - Statues now use variations. Requires Hammerstone 1.8.1.
+
 ## 1.6.0
 
  - Adds alpaca tapestry

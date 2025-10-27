@@ -1,6 +1,8 @@
 --- Furniture: data.lua
 --- @author SirLich
 
+local moduleManager = mjrequire "hammerstone/state/moduleManager"
+
 local data = {
 	dyeIngredients = {
 		red_dye = {
@@ -86,6 +88,44 @@ function data:getRemaps(baseModel, underscore)
 		end
 	end
 	return remapTable
+end
+
+-- Creates remap data for models that are built using cloth.
+-- Intended to be used inside of the constructable.
+function data:getClothRemaps(baseModel)
+	local remapTable = {}
+	for _, color in ipairs(data.colors) do
+		remapTable[color .. "_cloth"] = color .. "_" .. baseModel -- 'blue_cloth' = 'blue_alpaca_tapestry' etc.
+	end
+	return remapTable
+end
+
+-- Creates remap data (to be used within builder:getModelRemaps())
+-- base model e.g., 
+function data:createClothModelRemaps(models)
+	local out = {}
+	
+	for _, color in ipairs(data.colors) do
+		for _, model in ipairs(models) do
+
+			local dye_identifier = color .. "_dye"
+
+			-- Default shared material remaps
+			local materialRemaps = {
+				brown_dye = dye_identifier,
+				brown_dye_dark = dye_identifier .. "_dark"
+			}
+
+			table.insert(out,{
+				model = color .. "_" .. model,
+				base_model =  model,
+				material_remaps = materialRemaps
+			})
+		end
+
+	end
+
+	return out
 end
 
 return data

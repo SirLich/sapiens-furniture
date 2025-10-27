@@ -1,0 +1,16 @@
+{
+	"hammerstone:global_definitions": {
+		"hs_materials": [
+			{
+				"identifier": "TACO",
+				"color": [
+					0.8,
+					0.8,
+					0.8
+				],
+				"metal": 0.0,
+				"roughness": 0.5
+			}
+		]
+	}
+}

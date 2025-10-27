@@ -17,7 +17,7 @@ return {
 	},
 	components = {
 		hs_object = {
-			model = "alpaca_banner"
+			model = "tapestry_alpaca"
 		},
 		hs_buildable = {
 			skill = "basicBuilding",
