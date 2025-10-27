@@ -61,7 +61,7 @@ local function generateDye(color)
 end
 
 -- Flattens the inner resources into a new list. So returns `flax` and `poppyFlower` (etc), without 'red_dye' (etc)
-local function flattenIngrediants()
+local function flattenIngredients()
 	local out = {}
 	for key, value in pairs(data.dyeIngredients) do
 		for i, ingrediant in ipairs(value) do
@@ -82,7 +82,7 @@ function gen:getResourceGroups()
 		{
 			identifier = "dye_ingredients",
 			display_object = "red_dye",
-			resources = flattenIngrediants()
+			resources = flattenIngredients()
 		}
 	}
 end

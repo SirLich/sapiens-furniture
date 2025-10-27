@@ -67,6 +67,10 @@ localizations.values = {
     statue_alpaca_name = "Alpaca Statue",
     statue_mammoth_name = "Mammoth Statue",
     statue_chicken_name = "Chicken Statue",
+
+    -- Tapestries
+    alpaca_tapestry_name = "Alpaca Tapestry",
+    sapiens_tapestry_name = "Sapiens Tapestry",
 }
 
 return localizations
