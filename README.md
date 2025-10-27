@@ -35,6 +35,10 @@ There are various material/model variations for the chairs, depending on the woo
 
 # Changelog
 
+## 1.6.2
+
+ - Fixes crash related to the material 'Material' being registered. Duplicate materials are not permitted. 
+
 ## 1.6.1
 
  - Statues now use variations. Requires Hammerstone 1.8.1.
