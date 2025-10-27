@@ -19,11 +19,10 @@ local function getVariations(isMain)
 	return nil
 end
 
-
-local function getRemaps(type)
+local function getRemaps(statueIdentifier)
 	local remapTable = {}
-	for _, color in ipairs(data.colors) do
-		remapTable[color .. "_cloth"] = color .. "_" .. type
+	for _, stoneType in ipairs(data.stoneTypes) do
+		remapTable[stoneType .. "_stoneStock"] = stoneType .. "_" .. statueIdentifier -- 'sandstoneYellowRock_stoneStock' = 'sandstoneYellowRock_statue_alpaca' etc.
 	end
 	return remapTable
 end
